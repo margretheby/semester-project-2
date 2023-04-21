@@ -1,3 +1,43 @@
-@import "../../bootstrap/dist/css/bootstrap.min.css";
+@import "../node_modules/bootstrap/dist/css/bootstrap.min.css";
+@import url("https://fonts.googleapis.com/css2?family=Abel&family=Cormorant+SC:wght@600&family=Major+Mono+Display&family=Rajdhani&display=swap");
+* {
+  background-color: #0F0140;
+  color: #FFFFFF;
+  font-family: "Rajdhani", sans-serif;
+}
+
+h3, a, label, nav, span, .navbar, .navbar-toggler-icon, .navbar-toggler, .navbar-nav, .nav-link, .navbar-dark {
+  color: #FFFFFF;
+  font-family: "Cormorant SC", serif;
+  text-decoration: none;
+}
+
+.navbar-brand {
+  font-family: "Major Mono Display", monospace;
+  color: #FFFFFF;
+}
+
+.navbar-nav:hover {
+  color: #6805F2 !important;
+}
+
+.active {
+  color: rgba(255, 255, 255, 0.6588235294) !important;
+}
+
+.btn-primary {
+  background-color: #0F0140;
+  border: #FFFFFF 2px solid;
+  border-radius: 0;
+}
+
+.btn-primary:hover, .btn-primary:disabled, .btn-primary:active, .btn-primary:focus {
+  background-color: #6805F2;
+  border: #6805F2 2px solid;
+}
+
+.img-thumbnail {
+  max-height: 40px;
+}
 
 /*# sourceMappingURL=css.map */
