@@ -10,11 +10,11 @@
     <script src="https://kit.fontawesome.com/14580da1e1.js" crossorigin="anonymous"></script>
 </head>
 <body>
-    <header class="d-flex pb-3">
+    <header class="d-flex pb-3 flex-lg-row-reverse">
         <div class="container pe-0 ps-1">
-            <nav class="navbar navbar-expand-md pt-0">
+            <nav class="navbar navbar-expand-lg pt-0">
                 <div>
-                    <button class="btn btn-primary btn-box btn-nav" type="button" data-bs-toggle="collapse" data-bs-target="#nav" aria-expanded="false" aria-controls="#nav">
+                    <button class="btn btn-primary btn-box btn-nav hidden-desktop" type="button" data-bs-toggle="collapse" data-bs-target="#nav" aria-expanded="false" aria-controls="#nav">
                         <span><i class="fa-sharp fa-solid fa-bars"></i></span>
                     </button>
                     <div class="collapse navbar-collapse justify-content-start my-4 col-12" id="nav">
@@ -28,27 +28,26 @@
                             <li class="nav-item">
                                 <a href="login.html" class="nav-link"><i class="fa-sharp fa-solid fa-right-to-bracket"></i> Login</a>
                             </li>
-                            <li class="nav-item">
-                                <a href="#" class="nav-link"><i class="fa-sharp fa-solid fa-right-from-bracket"></i> Logout</a>
-                            </li>
                         </ul>
                     </div>
                 </div>
             </nav>
         </div>
         <div class="container">
-            <div class="row hidden-mobile">
-                <div class="col-6">
+            <div class="row hidden-mobile search-desktop">
+                <div class="col-6 col-lg-10">
                     <form class="d-flex align-items-center">
                         <input type="text" id="search-desktop" name="search-desktop" placeholder="Search listings" class="form-control me-2">
-                        <label for="search-desktop"><button class="btn btn-primary btn-box"><i class="fa-solid fa-magnifying-glass"></i></button></label>
+                        <label for="search-desktop"><button class="btn btn-primary btn-box btn-search"><i class="fa-solid fa-magnifying-glass"></i></button></label>
                     </form>
                 </div>
             </div>
+        </div>
+        <div class="container">
             <div class="row">
-                <div class="col-6 mt-2">
-                    <a href="index.html" class="navbar-brand">
-                        <i class="fa-sharp fa-solid fa-cube"></i>BidBox
+                <div class="col-6 col-lg-12 mt-2">
+                    <a href="index.html" class="navbar-brand brand-logo">
+                        <i class="fa-sharp fa-solid fa-cube"></i> BidBox
                     </a>
                 </div>
             </div>
@@ -57,14 +56,14 @@
     <main>
         <div class="container d-flex justify-content-between align-items-start">
             <div class="row">
-                <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6">
+                <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12">
                     <button class="btn btn-secondary btn-box" type="button" data-bs-toggle="collapse" data-bs-target="#new-listing" aria-expanded="false" aria-controls="new-listing">
                         <i class="fa-sharp fa-solid fa-plus"></i>
                     </button>
                     <div class="collapse" id="new-listing">
                         <div class="container">
                             <div class="row d-flex justify-content-end">
-                                <div class="col">
+                                <div class="col-12">
                                     <form class="mb-5">
                                         <label for="title" class="mt-3">Title</label>
                                         <input type="text" name="title" id="title" class="form-control" required>
@@ -83,7 +82,7 @@
                 </div>
             </div>
             <div class="row">
-                <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 d-flex ps-0">
+                <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 d-flex ps-0">
                     <div class="collapse" id="update-avatar">
                         <div class="container">
                             <div class="row d-flex justify-content-end">
@@ -103,25 +102,26 @@
             </div>
         </div>
         <div class="container pt-5">
-            <div class="row d-flex">
-                <div class="col-12 justify-content-start d-flex">
-                    <img class="img-thumbnail p-0" src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=764&q=80" alt="Profile avatar">
-                    <h1 class="ms-3">Username</h1>
-                </div>
-            </div>
-            <div class="row d-flex mt-2">
-                <div class="col-8">
-                    <h3>Credit:</h3>
-                </div>
-                <div class="col-4 d-flex justify-content-end">
-                    <h3>1000</h3>
+            <div class="row d-flex justify-content-center">
+                <div class="profile-info col-12 col-md-10 col-lg-6">
+                    <div class="justify-content-start d-flex">
+                        <img class="img-thumbnail p-0" src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=764&q=80" alt="Profile avatar">
+                        <h1 class="ms-3">Username</h1>
+                    </div>
+                    <div class="row d-flex mt-2 justify-content-between">
+                        <div class="col-6">
+                            <h3>Credit:</h3>
+                        </div>
+                        <div class="col-6 d-flex">
+                            <h3>1000</h3>
+                        </div>
+                    </div>
                 </div>
             </div>
             <div class="row mt-5">
-                <div class="col-12">
                     <h2>Your items</h2>
-                    <div class="col-12 my-4">
-                        <img src="https://images.unsplash.com/photo-1511447333015-45b65e60f6d5?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1255&q=80" alt="Image" class="img-fluid">
+                    <div class="col-12 my-4 col-md-6 col-lg-3">
+                        <a href="listing-item.html"><img src="https://images.unsplash.com/photo-1511447333015-45b65e60f6d5?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1255&q=80" alt="Image" class="img-fluid"></a>
                         <div class="row d-flex mt-2">
                             <div class="col-8">
                                 <h3>Item title</h3>
@@ -131,8 +131,8 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-12 my-4">
-                        <img src="https://images.unsplash.com/photo-1511447333015-45b65e60f6d5?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1255&q=80" alt="Image" class="img-fluid">
+                    <div class="col-12 my-4 col-md-6 col-lg-3">
+                        <a href="listing-item.html"><img src="https://images.unsplash.com/photo-1511447333015-45b65e60f6d5?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1255&q=80" alt="Image" class="img-fluid"></a>
                         <div class="row d-flex mt-2">
                             <div class="col-8">
                                 <h3>Item title</h3>
@@ -142,7 +142,6 @@
                             </div>
                         </div>
                     </div>
-                </div>
             </div>
         </div>
     </main>
@@ -151,7 +150,7 @@
             <div class="row">
                 <div class="col-12">
                     <nav class="navbar justify-content-center align-items-center">
-                        <ul class="navbar-nav">
+                        <ul class="navbar-nav flex-md-row gap-md-5">
                             <li class="navbar-item">
                                 <a href="index.html" class="nav-link">Home</a>
                             </li>
@@ -160,6 +159,25 @@
                             </li>
                             <li class="navbar-item">
                                 <a href="login.html" class="nav-link">Login</a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <nav class="navbar justify-content-center align-items-center">
+                        <ul class="navbar-nav flex-row gap-5">
+                            <li class="navbar-item">
+                                <a href="https://facebook.com" target="_blank" class="nav-link"><i class="fa-brands fa-square-facebook"></i></a>
+                            </li>
+                            <li class="navbar-item">
+                                <a href="https://instagram.com" target="_blank" class="nav-link"><i class="fa-brands fa-instagram"></i></a>
+                            </li>
+                            <li class="navbar-item">
+                                <a href="https://twitter.com" target="_blank" class="nav-link"><i class="fa-brands fa-square-twitter"></i></a>
                             </li>
                         </ul>
                     </nav>

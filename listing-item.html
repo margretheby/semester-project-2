@@ -10,11 +10,11 @@
     <script src="https://kit.fontawesome.com/14580da1e1.js" crossorigin="anonymous"></script>
 </head>
 <body>
-    <header class="d-flex pb-3">
+    <header class="d-flex pb-3 flex-lg-row-reverse">
         <div class="container pe-0 ps-1">
-            <nav class="navbar navbar-expand-md pt-0">
+            <nav class="navbar navbar-expand-lg pt-0">
                 <div>
-                    <button class="btn btn-primary btn-box btn-nav" type="button" data-bs-toggle="collapse" data-bs-target="#nav" aria-expanded="false" aria-controls="#nav">
+                    <button class="btn btn-primary btn-box btn-nav hidden-desktop" type="button" data-bs-toggle="collapse" data-bs-target="#nav" aria-expanded="false" aria-controls="#nav">
                         <span><i class="fa-sharp fa-solid fa-bars"></i></span>
                     </button>
                     <div class="collapse navbar-collapse justify-content-start my-4 col-12" id="nav">
@@ -28,27 +28,26 @@
                             <li class="nav-item">
                                 <a href="login.html" class="nav-link"><i class="fa-sharp fa-solid fa-right-to-bracket"></i> Login</a>
                             </li>
-                            <li class="nav-item">
-                                <a href="#" class="nav-link"><i class="fa-sharp fa-solid fa-right-from-bracket"></i> Logout</a>
-                            </li>
                         </ul>
                     </div>
                 </div>
             </nav>
         </div>
         <div class="container">
-            <div class="row hidden-mobile">
-                <div class="col-6">
+            <div class="row hidden-mobile search-desktop">
+                <div class="col-6 col-lg-10">
                     <form class="d-flex align-items-center">
                         <input type="text" id="search-desktop" name="search-desktop" placeholder="Search listings" class="form-control me-2">
-                        <label for="search-desktop"><button class="btn btn-primary btn-box"><i class="fa-solid fa-magnifying-glass"></i></button></label>
+                        <label for="search-desktop"><button class="btn btn-primary btn-box btn-search"><i class="fa-solid fa-magnifying-glass"></i></button></label>
                     </form>
                 </div>
             </div>
+        </div>
+        <div class="container">
             <div class="row">
-                <div class="col-6 mt-2">
-                    <a href="index.html" class="navbar-brand">
-                        <i class="fa-sharp fa-solid fa-cube"></i>BidBox
+                <div class="col-6 col-lg-12 mt-2">
+                    <a href="index.html" class="navbar-brand brand-logo">
+                        <i class="fa-sharp fa-solid fa-cube"></i> BidBox
                     </a>
                 </div>
             </div>
@@ -56,8 +55,8 @@
     </header>
     <main>
         <div class="container pt-4">
-            <div class="row">
-                <div class="col">
+            <div class="row justify-content-center">
+                <div class="col-10 col-sm-7 col-md-6 col-lg-5">
                     <h1>Item title</h1>
                     <img src="https://images.unsplash.com/photo-1511447333015-45b65e60f6d5?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1255&q=80" alt="Image" class="img-fluid">
                     <p class="pt-2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo sunt, recusandae quae fugit odio iusto. Impedit modi, sit quidem vero laudantium facilis cumque atque esse optio nostrum earum tempore exercitationem odio eius ut error autem velit. Incidunt nesciunt sequi at!</p>
@@ -94,7 +93,7 @@
             <div class="row">
                 <div class="col-12">
                     <nav class="navbar justify-content-center align-items-center">
-                        <ul class="navbar-nav">
+                        <ul class="navbar-nav flex-md-row gap-md-5">
                             <li class="navbar-item">
                                 <a href="index.html" class="nav-link">Home</a>
                             </li>
@@ -103,6 +102,25 @@
                             </li>
                             <li class="navbar-item">
                                 <a href="login.html" class="nav-link">Login</a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <nav class="navbar justify-content-center align-items-center">
+                        <ul class="navbar-nav flex-row gap-5">
+                            <li class="navbar-item">
+                                <a href="https://facebook.com" target="_blank" class="nav-link"><i class="fa-brands fa-square-facebook"></i></a>
+                            </li>
+                            <li class="navbar-item">
+                                <a href="https://instagram.com" target="_blank" class="nav-link"><i class="fa-brands fa-instagram"></i></a>
+                            </li>
+                            <li class="navbar-item">
+                                <a href="https://twitter.com" target="_blank" class="nav-link"><i class="fa-brands fa-square-twitter"></i></a>
                             </li>
                         </ul>
                     </nav>

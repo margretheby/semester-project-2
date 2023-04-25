@@ -15,8 +15,20 @@ h1, h2 {
   color: #B580FF;
 }
 
+.cta-link {
+  color: #B580FF;
+}
+
+.cta-link:hover, .nav-link:hover, .brand-logo:hover {
+  color: #6805F2;
+}
+
 h2 {
   font-size: 25px;
+}
+
+h3 {
+  font-size: 20px;
 }
 
 h3, a, label, nav, span, button, .navbar, .navbar-toggler-icon, .navbar-toggler, .navbar-nav, .nav-link, .navbar-dark {
@@ -34,7 +46,7 @@ h3, a, label, nav, span, button, .navbar, .navbar-toggler-icon, .navbar-toggler,
   text-transform: none;
 }
 
-.navbar-nav:hover {
+.navbar-nav:hover, .fa-brands:hover {
   color: #6805F2 !important;
 }
 
@@ -52,9 +64,12 @@ h3, a, label, nav, span, button, .navbar, .navbar-toggler-icon, .navbar-toggler,
   font-family: "Chivo Mono", monospace;
 }
 
-/* FIND OUT .fa-bars and .fa-magnifying-glass */
 .fa-plus, .fa-bars:checked, .btn-secondary {
   background-color: #6805F2;
+}
+
+.fa-brands {
+  font-size: 40px;
 }
 
 .btn-box {
@@ -94,8 +109,29 @@ h3, a, label, nav, span, button, .navbar, .navbar-toggler-icon, .navbar-toggler,
   display: none;
 }
 
-.hidden-desktop {
-  display: block;
+.profile-info {
+  max-width: 300px;
+}
+
+@media (min-width: 992px) {
+  .hidden-desktop {
+    display: none;
+  }
+  .hidden-mobile {
+    display: block;
+  }
+  .search-desktop {
+    margin-top: 10px;
+  }
+  #nav {
+    margin: 10px !important;
+  }
+  .navbar-brand {
+    margin-left: 20px;
+  }
+  .btn-search {
+    border: 0px !important;
+  }
 }
 
 /*# sourceMappingURL=css.map */
