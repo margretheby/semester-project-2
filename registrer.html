@@ -26,7 +26,7 @@
                                 <a href="profile.html" class="nav-link"><i class="fa-sharp fa-solid fa-user"></i> Profile</a>
                             </li>
                             <li class="nav-item">
-                                <a href="login.html" class="nav-link"><i class="fa-sharp fa-solid fa-right-to-bracket"></i> Login</a>
+                                <a href="login.html" class="nav-link login-link"><i class="fa-sharp fa-solid fa-right-to-bracket"></i> Login</a>
                             </li>
                         </ul>
                     </div>
@@ -58,7 +58,7 @@
             <div class="row justify-content-center">
                 <div class="col-10 col-sm-6 col-md-5 col-lg-4">
                     <h1>Registrer</h1>
-                    <form class="mt-4">
+                    <form class="mt-4 registrer-form">
                         <label for="name">Name *</label>
                         <input type="text" id="name" name="name" class="form-control mb-4" placeholder="username" title="Your username can not exceed 20 characters." required pattern="^[\w]+$" 
                         maxLengt="20">
@@ -76,7 +76,7 @@
                         </div>    
                     </form>
                     <div class="d-flex flex-column align-items-center">
-                        <p class="mb-0">Already have a user?</p>
+                        <p class="mb-0 registrer-success">Already have a user?</p>
                         <a href="login.html" class="cta-link">Click here to login</a>
                     </div>
 
@@ -133,5 +133,7 @@
         </div>
     </footer>
     <script defer src="node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
+    <script defer src="js/registrer.js" type="module"></script>
+    <script defer src="js/index.js" type="module"></script>
 </body>
 </html>
