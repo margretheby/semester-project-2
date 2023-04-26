@@ -1,5 +1,5 @@
 import { registrerUrl } from "../api/urls.js";
-import { registrerForm } from "../variables/const.js"
+import { registrerForm, registrerSuccessMessage } from "../variables/const.js"
 
 export function setRegistrerUserListener() {
     registrerForm.addEventListener("submit", (event) => {
@@ -25,8 +25,13 @@ async function registrerUser(user) {
         const response = await fetch(registrerUrl, userData);
         const result = await response.json();
 
-        console.log(result)
+        if(result.statusCode !== 400) {
+            registrerSuccessMessage.innerText = "Success! Your account has been registered."
+        } else {
+            registrerSuccessMessage.innerText = "Ooobs! Seems like something went wrong, please try again."
+        } 
     } catch (error) {
         console.log(error);
+        registrerSuccessMessage.innerText = "Ooobs! Seems like something went wrong, please try again."
     }
 }

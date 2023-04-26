@@ -1,5 +1,6 @@
-// registrer form
+// registrer
 export const registrerForm = document.querySelector(".registrer-form");
+export const registrerSuccessMessage = document.querySelector(".registrer-success");
 
 //login form
 export const loginForm = document.querySelector(".login-form");
