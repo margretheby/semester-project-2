@@ -26,7 +26,7 @@
                                 <a href="profile.html" class="nav-link"><i class="fa-sharp fa-solid fa-user"></i> Profile</a>
                             </li>
                             <li class="nav-item">
-                                <a href="login.html" class="nav-link active"><i class="fa-sharp fa-solid fa-right-to-bracket"></i> Login</a>
+                                <a href="login.html" class="nav-link active login-link"><i class="fa-sharp fa-solid fa-right-to-bracket"></i> Login</a>
                             </li>
                         </ul>
                     </div>
@@ -58,7 +58,7 @@
             <div class="row justify-content-center">
                 <div class="col-10 col-sm-6 col-md-5 col-lg-4">
                     <h1>Login</h1>
-                    <form class="mt-4">
+                    <form class="mt-4 login-form">
                         <label for="email">Email</label>
                         <input type="email" id="email" name="email" class="form-control mb-4" placeholder="your-email@stud.noroff.no" title="You can only registrer with a Noroff student e-mail. Example: studentname@stud.noroff.no" required pattern="^[\w\-.]+@stud\.?noroff\.no$">
                         
@@ -127,5 +127,7 @@
         </div>
     </footer>
     <script defer src="node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
+    <script defer src="js/login.js" type="module"></script>
+    <script defer src="js/index.js" type="module"></script>
 </body>
 </html>
