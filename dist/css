@@ -28,7 +28,7 @@ h2 {
 }
 
 h3 {
-  font-size: 20px;
+  font-size: 18px;
 }
 
 h3, a, label, nav, span, button, .navbar, .navbar-toggler-icon, .navbar-toggler, .navbar-nav, .nav-link, .navbar-dark {
@@ -94,6 +94,18 @@ h3, a, label, nav, span, button, .navbar, .navbar-toggler-icon, .navbar-toggler,
 
 .img-thumbnail {
   max-height: 40px;
+}
+
+.listing-image {
+  max-height: 162px;
+}
+
+.user-listings-card {
+  min-height: 150px;
+}
+
+.border {
+  border: #FFFFFF 2px solid !important;
 }
 
 .form-control {
