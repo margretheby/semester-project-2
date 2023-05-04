@@ -6,3 +6,4 @@ import { setListNewItemListener } from "./listeners/listItem.js"
 fetchProfile();
 setUpdateProfileAvatarListener();
 fetchProfileListings();
+setListNewItemListener();

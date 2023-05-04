@@ -12,6 +12,7 @@ export async function fetchListings() {
 
         const response = await fetch(listingsUrl, listingsData)
         const result = await response.json();
+        console.log(result)
         createHtmlForListings(result);
 
     } catch (error) {
@@ -21,10 +22,10 @@ export async function fetchListings() {
 
 function createHtmlForListings(listing) {
     for (let i = 0; i < listing.length; i++) {
-        const { media, title, _count } = listing[i];
+        const { media, title, _count, id } = listing[i];
         loading.innerHTML = "";
         listingsContainer.innerHTML += `<div class="col-5 my-3 ms-2 col-md-3 col-lg-2 border">
-                                            <a href="listing-item.html">
+                                            <a href="listing-item.html?id=${id}">
                                             <div class="mt-3">
                                                 <img src="${media}" alt="Image" class="img-fluid listing-image">
                                             </div>

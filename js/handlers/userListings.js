@@ -26,10 +26,10 @@ export async function fetchProfileListings() {
 
 function createHtmlForProfileListings(listing) {
     for (let i = 0; i < listing.length; i++) {
-        const { title, media, _count } = listing[i];
+        const { title, media, _count, id } = listing[i];
         loading.innerHTML = "";
         userListingsContainer.innerHTML += `<div class="col-5 my-3 ms-2 col-md-3 col-lg-2 border">
-        <a href="listing-item.html">
+        <a href="listing-item.html?id=${id}">
         <div class="mt-3">
             <img src="${media[0]}" alt="Image" class="img-fluid listing-image">
         </div>

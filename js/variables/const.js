@@ -8,7 +8,7 @@ export const loading = document.querySelector(".loading");
 export const listingTitle = document.querySelector(".listing-title");
 export const listingImage = document.querySelector(".listing-image");
 export const listingBids = document.querySelector(".listing-bids");
-export const listItemForm = document.querySelector(".list-item-form")
+export const listItemForm = document.querySelector(".list-item-form");
 
 // registrer page
 export const registrerForm = document.querySelector(".registrer-form");
@@ -18,12 +18,17 @@ export const registrerSuccessMessage = document.querySelector(".registrer-succes
 export const loginForm = document.querySelector(".login-form");
 
 // login/logout link 
-export const loginButton = document.querySelector(".login-link")
-export const loginLinkFooter = document.querySelector(".login-link-footer")
+export const loginButton = document.querySelector(".login-link");
+export const loginLinkFooter = document.querySelector(".login-link-footer");
 
 // profile page
-export const usernameProfile = document.querySelector(".username")
-export const userCredit = document.querySelector(".user-credit")
-export const userAvatar = document.querySelector(".avatar")
-export const updateAvatarForm = document.querySelector(".update-avatar")
-export const userListingsContainer = document.querySelector(".user-listing-container")
+export const usernameProfile = document.querySelector(".username");
+export const userCredit = document.querySelector(".user-credit");
+export const userAvatar = document.querySelector(".avatar");
+export const updateAvatarForm = document.querySelector(".update-avatar");
+export const userListingsContainer = document.querySelector(".user-listing-container");
+
+// specific listing item
+const params = new URLSearchParams(window.location.search);
+export const idParam = params.get("id");
+export const listingContainer = document.querySelector(".listing-container")
