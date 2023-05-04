@@ -24,6 +24,20 @@ function createHtmlForListings(listing) {
     for (let i = 0; i < listing.length; i++) {
         const { media, title, _count, id } = listing[i];
         loading.innerHTML = "";
+        if(media.length === 0) {
+            listingsContainer.innerHTML += `<div class="col-5 my-3 ms-2 col-md-3 col-lg-2 border pt-2">
+                                            <a href="listing-item.html?id=${id}">
+                                            <div class="row d-flex mt-2">
+                                                <div class="col-8">
+                                                    <h3>${title}</h3>
+                                                </div>
+                                                <div class="col-4 d-flex justify-content-end">
+                                                    <h3>${_count.bids}</h3>
+                                                </div>
+                                            </div>
+                                            </a>
+                                        </div>`
+        } else {
         listingsContainer.innerHTML += `<div class="col-5 my-3 ms-2 col-md-3 col-lg-2 border">
                                             <a href="listing-item.html?id=${id}">
                                             <div class="mt-3">
@@ -39,5 +53,6 @@ function createHtmlForListings(listing) {
                                             </div>
                                             </a>
                                         </div>`
+        }
     }
 }

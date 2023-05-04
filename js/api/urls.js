@@ -12,6 +12,7 @@ export const listItemUrl = `${API_BASE_URL}listings`;
 
 // specific listing
 export const listingItemUrl = `${listItemUrl}/${idParam}?_seller=true&_bids=true`
+export const updateListingUrl = `${listItemUrl}/${idParam}`
 
 // profile 
 export const profileUrl = `${API_BASE_URL}profiles/${username}`;
