@@ -2,6 +2,9 @@
 export const token = localStorage.getItem("token");
 export const username = localStorage.getItem("username");
 
+// all pages 
+export const profileLink = document.querySelector(".profile-nav");
+
 // index page 
 export const listingsContainer = document.querySelector(".listings-container");
 export const loading = document.querySelector(".loading");
@@ -29,6 +32,18 @@ export const updateAvatarForm = document.querySelector(".update-avatar");
 export const userListingsContainer = document.querySelector(".user-listing-container");
 
 // specific listing item
+export const listingContainer = document.querySelector(".listing-container");
+export const deleteButton = document.querySelector(".delete-button");
+export const bidForm = document.querySelector(".bid-form");
+export const editingTools = document.querySelector(".editing-tools");
+
+// parameters
 const params = new URLSearchParams(window.location.search);
-export const idParam = params.get("id");
-export const listingContainer = document.querySelector(".listing-container")
+export const idParam = params.get("id"); 
+export const usernameParam = params.get("username"); 
+
+// update listing
+export const updateListingForm = document.querySelector(".update-listing-form");
+export const updateTitle = document.querySelector("#title");
+export const updateDescription = document.querySelector("#description");
+export const updateMedia = document.querySelector("#media");

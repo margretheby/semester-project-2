@@ -1,5 +1,5 @@
 import { profileUrl } from "../api/urls.js";
-import { token, usernameProfile, userCredit, userAvatar } from "../variables/const.js";
+import { token, usernameProfile, userCredit, userAvatar, usernameParam } from "../variables/const.js";
 
 export async function fetchProfile () {
     try {
@@ -23,7 +23,11 @@ export async function fetchProfile () {
 
 function createHtmlForProfile(profileInfo) {
     const { name, avatar, credits } = profileInfo;
+    if(usernameParam) {
+        usernameProfile.innerText = usernameParam;
+    } else {
     usernameProfile.innerText = name;
     userCredit.innerText = credits;
     userAvatar.innerHTML = `<img class="img-thumbnail p-0" src="${avatar}" alt="Profile avatar for ${name}">`;
+    }
 }

@@ -22,7 +22,7 @@
                             <li class="nav-item">
                                 <a href="index.html" class="nav-link" aria-current="page"><i class="fa-sharp fa-solid fa-house"></i> Home</a>
                             </li>
-                            <li class="nav-item">
+                            <li class="nav-item profile-nav">
                                 <a href="profile.html" class="nav-link"><i class="fa-sharp fa-solid fa-user"></i> Profile</a>
                             </li>
                             <li class="nav-item">
@@ -55,23 +55,34 @@
     </header>
     <main>
         <div class="container pt-4">
-            <div class="row">
-                <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 d-flex ps-0 justify-content-end">
+            <div class="row flex-row-reverse editing-tools">
+                <div class="col-3 d-flex justify-content-end">
+                    <button class="btn btn-secondary btn-box delete-button">
+                        <i class="fa-sharp fa-solid fa-trash"></i>
+                    </button>
+                </div>
+                <div class="col-xl-9 col-lg-9 col-md-9 col-sm-9 d-flex ps-0 justify-content-start">
+                    <button class="btn btn-primary btn-box" type="button" data-bs-toggle="collapse" data-bs-target="#update-listing" aria-expanded="false" aria-controls="update-avatar"><i class="fa-sharp fa-solid fa-gear"></i></button>
                     <div class="collapse" id="update-listing">
                         <div class="container">
-                            <div class="row d-flex justify-content-end">
+                            <div class="row d-flex">
                                 <div class="col mt-5">
                                     <h3>Update listing</h3>
-                                    <form class="mb-5 update-listing">
-                                        <label for="media" class="mt-3">Media (url)</label>
-                                        <input type="url" name="media" id="update-listing" class="form-control" placeholder="https://pics.com/image.jpg">
+                                    <form class="mb-5 update-listing-form">
+                                        <label for="title" class="mt-3">Title</label>
+                                        <input type="text" name="title" id="title" class="form-control" required>
+                                        <label for="description" class="mt-3">Description</label>
+                                        <textarea name="description" id="description" rows="4" class="form-control"></textarea>
+                                        <label for="media" class="mt-3">Image (url)</label>
+                                        <input type="url" name="media" id="media" class="form-control" placeholder="https://pics.com/image.jpg">
+                                        <label for="endsAt" class="mt-3">Ends at:</label>
+                                        <input type="date" name="endsAt" id="endsAt" class="form-control" required>
                                         <button class="btn btn-primary mt-3">Update</button>
                                     </form>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <button class="btn btn-primary btn-box" type="button" data-bs-toggle="collapse" data-bs-target="#update-listing" aria-expanded="false" aria-controls="update-avatar"><i class="fa-sharp fa-solid fa-gear"></i></button>
                 </div>
             </div>
             <div class="row justify-content-center">
@@ -80,7 +91,7 @@
 
                     </div>
                     <div class="row mt-2">
-                            <form>
+                            <form class="bid-form">
                                 <div class="d-flex">
                                     <div class="col-8 mt-1">
                                         <label for="amount"><h3>Your bid: </h3></label>
@@ -149,6 +160,6 @@
     </footer>
     <script defer src="node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
     <script defer src="js/index.js" type="module"></script>
-    <script defer src="js/listing-item.js" type="module"></script>
+    <script defer src="js/listingItem.js" type="module"></script>
 </body>
 </html>
