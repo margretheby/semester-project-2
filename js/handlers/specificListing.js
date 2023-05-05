@@ -24,33 +24,53 @@ export async function fetchSpecificListing() {
 
 function createHtmlForSpecificListing(listing) {
     const { title, description, media, seller, bids, endsAt } = listing;
+    const lastBid = bids[bids.length -1].amount;
     if(media.length === 0) {
         listingContainer.innerHTML = `
-        <p class="mb-0"><a href="profile.html?username=${seller.name}" class="nav-link"><img src="${seller.avatar}" class="img-thumbnail p-0 me-2">${seller.name}</p></a>
-        <h1>${title}</h1>
+                <h1>${title}</h1>
+                <div class="row d-flex">
+                    <div class="col-6">
+                        <h3>Seller: </h3>
+                    </div>
+                    <div class="col-6 d-flex justify-content-end">
+                        <a href="profile.html?username=${seller.name}" class="nav-link">${seller.name}</a> 
+                    </div>
+                </div>
                 <p class="pt-2">${description}</p>
                 <div class="row d-flex mt-5">
                     <div class="col-8">
                         <h3>Current bid:</h3>
                     </div>
                     <div class="col-4 d-flex justify-content-end">
-                        <h3>${bids[0].amount}</h3>
+                        <h3>${lastBid}</h3>
                     </div>
                 </div>`
     } else {
         listingContainer.innerHTML = `
-        <p class="mb-0"><a href="profile.html?username=${seller.name}" class="nav-link"><img src="${seller.avatar}" class="img-thumbnail p-0 me-2">${seller.name}</p></a>
-        <img src="${media[0]}" alt="Image for ${title} listing" class="img-fluid">
         <h1>${title}</h1>
+        <div class="row d-flex">
+            <div class="col-6">
+                <h3>Seller: </h3>
+            </div>
+            <div class="col-6 d-flex justify-content-end">
+                <a href="profile.html?username=${seller.name}" class="nav-link">${seller.name}</a> 
+            </div>
+        </div>
+        <div class="listing-images"></div>
                 <p class="pt-2">${description}</p>
                 <div class="row d-flex mt-5">
                     <div class="col-8">
                         <h3>Current bid:</h3>
                     </div>
                     <div class="col-4 d-flex justify-content-end">
-                        <h3>${bids[0].amount}</h3>
+                        <h3>${lastBid}</h3>
                     </div>
-                </div>`
+                </div>
+                `
+                for(let i = 0; i < media.length; i++) {
+                    const listingImage = document.querySelector(".listing-images")
+                    listingImage.innerHTML += `<img src="${media[i]}" alt="Image for ${title} listing" class="img-fluid my-1">`
+                }
         }
 
     updateTitle.value = title;
