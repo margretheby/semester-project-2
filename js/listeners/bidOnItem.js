@@ -1,5 +1,5 @@
 import { bidOnListingUrl } from "../api/urls.js";
-import { token, bidForm } from "../variables/const.js"
+import { token, bidForm, bidMessage } from "../variables/const.js"
 
 export function setBidOnListingListener() {
     bidForm.addEventListener("submit", (event) => {
@@ -29,8 +29,25 @@ async function bidOnListing(bid) {
 
         const response = await fetch(bidOnListingUrl, bidData);
         const result = await response.json();
-        console.log(result);
+
+
     } catch(error) {
         console.log(error);
+        console.log("nay");
+    }
+}
+
+
+function errorMessage(bid) {
+    for(let i = 0; i < bid.length; i++) {
+        const lastBid = bid[bid.length -1].amount
+        console.log(lastBid);
+        if(newBid > lastBid) {
+            console.log("yay")
+            bidMessage.innerText = `Success! Your bid was accepted.`; 
+        } else {
+            bidMessage.innerText = `Sorry! Your bid must be higher than the current bid.`;
+            console.log("nay")
+        }
     }
 }

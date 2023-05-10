@@ -1,7 +1,6 @@
 import { profileUrl } from "../api/urls.js";
-import { token, usernameProfile, userCredit, userAvatar, usernameParam } from "../variables/const.js";
-
-export async function fetchProfile () {
+import { token, usernameProfile, userCredit, userAvatar, usernameParam, creditInfo } from "../variables/const.js";
+export async function getProfile () {
     try {
         const userData = {
             method: "GET",
@@ -25,6 +24,7 @@ function createHtmlForProfile(profileInfo) {
     const { name, avatar, credits } = profileInfo;
     if(usernameParam) {
         usernameProfile.innerText = usernameParam;
+        creditInfo.classList.add("d-none");
     } else {
     usernameProfile.innerText = name;
     userCredit.innerText = credits;
