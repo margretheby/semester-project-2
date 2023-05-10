@@ -27,6 +27,7 @@ export const loginLinkFooter = document.querySelector(".login-link-footer");
 // profile page
 export const usernameProfile = document.querySelector(".username");
 export const userCredit = document.querySelector(".user-credit");
+export const creditInfo = document.querySelector(".credit-info");
 export const userAvatar = document.querySelector(".avatar");
 export const updateAvatarForm = document.querySelector(".update-avatar");
 export const userListingsContainer = document.querySelector(".user-listing-container");
@@ -36,6 +37,9 @@ export const listingContainer = document.querySelector(".listing-container");
 export const deleteButton = document.querySelector(".delete-button");
 export const bidForm = document.querySelector(".bid-form");
 export const editingTools = document.querySelector(".editing-tools");
+export const bidMessage = document.querySelector(".bid-message");
+export const bidModal = document.querySelector(".modal")
+export const bidModalButton = document.querySelector(".view-bids-btn")
 
 // parameters
 const params = new URLSearchParams(window.location.search);
@@ -47,3 +51,7 @@ export const updateListingForm = document.querySelector(".update-listing-form");
 export const updateTitle = document.querySelector("#title");
 export const updateDescription = document.querySelector("#description");
 export const updateMedia = document.querySelector("#media");
+
+// search
+export const searchDesktop = document.querySelector("#search-desktop-form");
+export const searchMobile = document.querySelector("#search-form");

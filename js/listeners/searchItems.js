@@ -1,30 +1,31 @@
-import { listingsUrl } from "../api/urls.js";
-import { listingsContainer, loading } from "../variables/const.js";
-import { searchListings } from "../listeners/searchItems.js"
+import { listingsContainer, searchDesktop, searchMobile, loading } from "../variables/const.js";
 
-export async function fetchListings() {
-    try {
-        const listingsData = {
-            method: "GET",
-            headers: {
-                "Content-Type": "application/json"
+export function searchListings(listings) {
+    searchDesktop.onkeyup = function (event) {
+        const searchValue = event.target.value.trim().toLowerCase();
+        const filteredSearch = listings.filter(function (listings) {
+            if (listings.title.toLowerCase().includes(searchValue)) {
+                return true;
             }
-        }
-
-        const response = await fetch(listingsUrl, listingsData)
-        const result = await response.json();
-        console.log(result)
-        createHtmlForListings(result);
-        searchListings(result);
-
-    } catch (error) {
-        console.log(error);
+        });
+        displaySearchResult(filteredSearch);
     }
+    searchMobile.onkeyup = function (event) {
+        const searchValue = event.target.value.trim().toLowerCase();
+        const filteredSearch = listings.filter(function (listings) {
+            if (listings.title.toLowerCase().includes(searchValue)) {
+                return true;
+            }
+        });
+        displaySearchResult(filteredSearch);
+    } 
 }
 
-function createHtmlForListings(listing) {
-    for (let i = 0; i < listing.length; i++) {
-        const { media, title, _count, id } = listing[i];
+
+function displaySearchResult(result) {
+    listingsContainer.innerHTML = "";
+    result.forEach(function (result) {
+        const { media, title, _count, id } = result;
         loading.innerHTML = "";
         if(media.length === 0) {
             listingsContainer.innerHTML += `<div class="col-5 my-3 ms-2 col-md-3 col-lg-2 border pt-2">
@@ -56,6 +57,7 @@ function createHtmlForListings(listing) {
                                             </a>
                                         </div>`
         }
+    })
     
-    }
+    
 }

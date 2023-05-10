@@ -1,9 +1,9 @@
-import { fetchProfile } from "./handlers/userProfile.js";
-import { fetchProfileListings } from "./handlers/userListings.js";
+import { getProfile } from "./handlers/userProfile.js";
+import { getProfileListings } from "./handlers/userListings.js";
 import { setUpdateProfileAvatarListener } from "./listeners/updateUserAvatar.js"
 import { setListNewItemListener } from "./listeners/listItem.js"
 
-fetchProfile();
+getProfile();
+getProfileListings();
 setUpdateProfileAvatarListener();
-fetchProfileListings();
 setListNewItemListener();
