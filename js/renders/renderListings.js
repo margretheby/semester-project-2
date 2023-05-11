@@ -1,6 +1,6 @@
-import { userListingsContainer, loading } from "../variables/const.js";
+import { loading } from "../variables/const.js";
 
-export function renderHtmlForListing(listing) {
+export function renderHtmlForListings(listing, container) {
     for (let i = 0; i < listing.length; i++) {
         const { title, media, _count, id } = listing[i];
         loading.innerHTML = "";
@@ -21,7 +21,7 @@ export function renderHtmlForListing(listing) {
             const bidsHeading = document.createElement("h3");
             bidsHeading.innerText = `Bids: ${_count.bids}`
 
-            userListingsContainer.append(divContainer);
+            container.append(divContainer);
             divContainer.appendChild(link);
             link.appendChild(divRow);
             divRow.appendChild(divColumn);
@@ -38,6 +38,7 @@ export function renderHtmlForListing(listing) {
             const listingImage = document.createElement("img");
             listingImage.classList.add("img-fluid", "listing-image");
             listingImage.src = media;
+            listingImage.setAttribute("alt", `Image for the listing ${title}`);
             const divRow = document.createElement("div");
             divRow.classList.add("row", "d-flex", "mt-2");
             const divColumn = document.createElement("div");
@@ -49,7 +50,7 @@ export function renderHtmlForListing(listing) {
             const bidsHeading = document.createElement("h3");
             bidsHeading.innerText = `Bids: ${_count.bids}`
             
-            userListingsContainer.append(divContainer);
+            container.append(divContainer);
             divContainer.append(link);
             link.appendChild(imageContainer);
             imageContainer.appendChild(listingImage);

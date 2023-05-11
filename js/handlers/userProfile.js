@@ -12,7 +12,6 @@ export async function getProfile () {
         const response = await fetch(profileUrl, userData);
         const result = await response.json();
 
-        console.log(result);
         createHtmlForProfile(result);
 
     } catch (error) {
@@ -28,6 +27,11 @@ function createHtmlForProfile(profileInfo) {
     } else {
     usernameProfile.innerText = name;
     userCredit.innerText = credits;
-    userAvatar.innerHTML = `<img class="img-thumbnail p-0" src="${avatar}" alt="Profile avatar for ${name}">`;
+    const profileImage = document.createElement("img");
+    profileImage.classList.add("img-thumbnail", "p-0");
+    profileImage.setAttribute("alt", `Profile avatar for ${name}`);
+    profileImage.src = avatar;
+
+    userAvatar.appendChild(profileImage);
     }
 }
