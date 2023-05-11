@@ -31,6 +31,8 @@ async function listNewItem(title, description, media, endsAt) {
 
         const response = await fetch (listItemUrl, itemData);
         const result = await response.json();
+
+        location.reload();
     } catch (error) {
         console.log(error);
     }

@@ -7,10 +7,8 @@ export function setBidOnListingListener() {
         const bidForm = event.target;
         const formData = new FormData(bidForm);
         const bidData = [Object.fromEntries(formData.entries())];
-
-        console.log(bidData)
         const bid = bidData.map(({amount}) => +amount);
-        console.log(bid);
+
         bidOnListing( {amount: bid[0]} );
     })
 }
@@ -30,24 +28,25 @@ async function bidOnListing(bid) {
         const response = await fetch(bidOnListingUrl, bidData);
         const result = await response.json();
 
+        successMessage(result.bids);
+
 
     } catch(error) {
         console.log(error);
-        console.log("nay");
+        bidMessage.innerText = `Sorry! Your bid must be higher than the current bid.`;
     }
 }
 
 
-function errorMessage(bid) {
+function successMessage(bid) {
+
     for(let i = 0; i < bid.length; i++) {
-        const lastBid = bid[bid.length -1].amount
-        console.log(lastBid);
-        if(newBid > lastBid) {
-            console.log("yay")
+        const newBid = bid[bid.length -1].amount;
+        const currentBid = bid[bid.length -2].amount;
+        if (bid.length === 0) {
             bidMessage.innerText = `Success! Your bid was accepted.`; 
-        } else {
-            bidMessage.innerText = `Sorry! Your bid must be higher than the current bid.`;
-            console.log("nay")
+        } else if (newBid > currentBid) {
+            bidMessage.innerText = `Success! Your bid was accepted.`;         
         }
     }
 }
