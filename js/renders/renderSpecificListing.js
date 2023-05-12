@@ -6,6 +6,7 @@ export function renderHtmlForSpecificListing(listing) {
     loading.innerHTML = "";
     if (bids.length > 0) { 
         const lastBid = bids[bids.length -1].amount;
+        const lastBidder = bids[bids.length -1].bidderName;
         if(media.length === 0) {
             const itemTitle = document.createElement("h1");
             itemTitle.innerText = title;
@@ -37,6 +38,16 @@ export function renderHtmlForSpecificListing(listing) {
             secondRowSecondCol.classList.add("col-4", "d-flex", "justify-content-end");
             const lastBidHeading = document.createElement("h3");
             lastBidHeading.innerText = `$ ${lastBid}`
+            const containerThirdRow = document.createElement("div");
+            containerThirdRow.classList.add("row", "d-flex");
+            const thirdRowFirstCol = document.createElement("div");
+            thirdRowFirstCol.classList.add("col-8");
+            const currentBidder = document.createElement("p");
+            currentBidder.innerText = `Made by: `;
+            const thirdRowSecondCol = document.createElement("div");
+            thirdRowSecondCol.classList.add("col-4", "d-flex", "justify-content-end");
+            const lastBidderName = document.createElement("p");
+            lastBidderName.innerText = `${lastBidder}`
 
             listingContainer.appendChild(itemTitle);
             listingContainer.appendChild(containerFirstRow);
@@ -52,6 +63,11 @@ export function renderHtmlForSpecificListing(listing) {
             secondRowFirstCol.appendChild(currentBidHeading);
             containerSecondRow.appendChild(secondRowSecondCol);
             secondRowSecondCol.appendChild(lastBidHeading); 
+            listingContainer.appendChild(containerThirdRow);
+            containerThirdRow.appendChild(thirdRowFirstCol);
+            thirdRowFirstCol.appendChild(currentBidder);
+            containerThirdRow.appendChild(thirdRowSecondCol);
+            thirdRowSecondCol.appendChild(lastBidderName); 
         } else { 
             const itemTitle = document.createElement("h1");
             itemTitle.innerText = title;
@@ -84,7 +100,17 @@ export function renderHtmlForSpecificListing(listing) {
             const secondRowSecondCol = document.createElement("div");
             secondRowSecondCol.classList.add("col-4", "d-flex", "justify-content-end");
             const lastBidHeading = document.createElement("h3");
-            lastBidHeading.innerText = `$ ${lastBid}`
+            lastBidHeading.innerText = `$ ${lastBid}`;
+            const containerThirdRow = document.createElement("div");
+            containerThirdRow.classList.add("row", "d-flex");
+            const thirdRowFirstCol = document.createElement("div");
+            thirdRowFirstCol.classList.add("col-8");
+            const currentBidder = document.createElement("p");
+            currentBidder.innerText = `Made by: `;
+            const thirdRowSecondCol = document.createElement("div");
+            thirdRowSecondCol.classList.add("col-4", "d-flex", "justify-content-end");
+            const lastBidderName = document.createElement("p");
+            lastBidderName.innerText = `${lastBidder}`
 
             listingContainer.appendChild(itemTitle);
             listingContainer.appendChild(containerFirstRow);
@@ -101,6 +127,11 @@ export function renderHtmlForSpecificListing(listing) {
             secondRowFirstCol.appendChild(currentBidHeading);
             containerSecondRow.appendChild(secondRowSecondCol);
             secondRowSecondCol.appendChild(lastBidHeading); 
+            listingContainer.appendChild(containerThirdRow);
+            containerThirdRow.appendChild(thirdRowFirstCol);
+            thirdRowFirstCol.appendChild(currentBidder);
+            containerThirdRow.appendChild(thirdRowSecondCol);
+            thirdRowSecondCol.appendChild(lastBidderName); 
 
 
 
