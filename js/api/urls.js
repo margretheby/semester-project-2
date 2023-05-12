@@ -18,6 +18,7 @@ export const updateListingUrl = `${listItemUrl}/${idParam}`
 export const profileUrl = `${API_BASE_URL}profiles/${username}`;
 export const profileMediaUrl = `${profileUrl}/media`;
 export const profileListingsUrl = `${profileUrl}/listings`;
+export const profileActiveListingsUrl = `${profileUrl}/listings?_active=true`;
 
 // bids
 export const bidOnListingUrl = `${listItemUrl}/${idParam}/bids?_bids=true`;
