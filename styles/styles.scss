@@ -1,0 +1,150 @@
+@import "variables";
+@import "../node_modules/bootstrap/dist/css/bootstrap.min.css";
+@import url('https://fonts.googleapis.com/css2?family=Abel&family=Chivo+Mono:wght@500;700&family=Major+Mono+Display&family=Rajdhani&display=swap');
+
+* {
+    background-color: $primary;
+    color: $secondary;
+    font-family: 'Rajdhani', sans-serif;
+} 
+
+h1 {
+    font-size: 30px;
+}
+
+h1, h2 {
+    font-family: 'Chivo Mono', monospace;
+    color: $headings;
+}
+
+.cta-link {
+    color: $headings;
+}
+
+.cta-link:hover, .nav-link:hover, .brand-logo:hover {
+    color: $hover;
+}
+
+h2 {
+    font-size: 25px;
+}
+
+h3 {
+    font-size: 18px;
+}
+
+h3, a, label, nav, span, button, .navbar, .navbar-toggler-icon, .navbar-toggler, .navbar-nav, .nav-link, .navbar-dark {
+    color: $secondary;
+    font-family: 'Chivo Mono', monospace;
+    font-weight: 500;
+    text-transform: uppercase;
+    text-decoration: none;
+}
+
+.navbar-brand {
+    font-family: 'Major Mono Display', monospace;
+    color: $secondary;
+    font-size: 25px;
+    text-transform: none;
+}
+
+.navbar-nav:hover, .fa-brands:hover {
+    color: $hover!important;
+}
+
+.active {
+    color: #ffffffa8!important;
+}
+
+.btn-primary, .btn-secondary:hover, .btn-secondary:disabled, .btn-secondary:active, .btn-secondary:focus {
+    background-color: $primary;
+}
+
+.btn-primary, .btn-secondary {
+    border: $secondary 2px solid;
+    border-radius: 0;
+    font-family: 'Chivo Mono', monospace;
+}
+
+.fa-plus, .fa-bars:checked, .btn-secondary {
+    background-color: $hover;
+}
+
+.fa-brands {
+    font-size: 40px;
+}
+
+.btn-box {
+    height: 42px;
+    width: 42px;
+}
+
+#search {
+    height: 42px;
+}
+
+.btn-primary:hover, .btn-primary:disabled, .btn-primary:active, .btn-primary:focus {
+    background-color: $hover;
+    border: $hover 2px solid;
+}
+
+.btn-nav, .btn-nav:hover, .btn-nav:disabled, .btn-nav:active, .btn-nav:focus {
+    border: 0px;
+    background-color: $primary;
+    font-size: 30px;
+}
+
+.img-thumbnail {
+    max-height: 40px;
+}
+
+.listing-image {
+    max-height: 162px;
+}
+
+.user-listings-card {
+    min-height: 150px;
+}
+
+
+.border {
+    border: $secondary 2px solid!important;
+} 
+
+.form-control {
+    border-radius: 0px;
+    opacity: 70%;
+}
+
+.form-control:focus {
+    opacity: 90%;
+}
+
+.hidden-mobile {
+    display: none;
+}
+
+.profile-info {
+    max-width: 300px;
+}
+
+@media (min-width: 992px) {
+    .hidden-desktop {
+        display: none;
+    }
+    .hidden-mobile {
+        display: block;
+    }
+    .search-desktop {
+        margin-top: 10px;
+    }
+    #nav {
+        margin: 10px !important;
+    }
+    .navbar-brand {
+        margin-left: 20px;
+    }
+    .btn-search {
+        border: 0px!important;
+    }
+}
