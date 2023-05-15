@@ -6,6 +6,7 @@ export function renderHtmlForSpecificListing(listing) {
     loading.innerHTML = "";
     if (bids.length > 0) { 
         const lastBid = bids[bids.length -1].amount;
+        const lastBidder = bids[bids.length -1].bidderName;
         if(media.length === 0) {
             const itemTitle = document.createElement("h1");
             itemTitle.innerText = title;
@@ -17,10 +18,8 @@ export function renderHtmlForSpecificListing(listing) {
             itemSeller.innerText = `Seller: `;
             const containerSecondCol = document.createElement("div");
             containerSecondCol.classList.add("col-6", "d-flex", "justify-content-end");
-            const linkToSeller = document.createElement("a");
-            linkToSeller.classList.add("nav-link");
-            linkToSeller.href = `profile.html?username=${seller.name}`;
-            linkToSeller.innerText = `${seller.name}`;
+            const sellerName = document.createElement("h3");
+            sellerName.innerText = `${seller.name}`;
             const itemDescription = document.createElement("p");
             itemDescription.classList.add("pt-2");
             itemDescription.innerText = description;
@@ -37,13 +36,23 @@ export function renderHtmlForSpecificListing(listing) {
             secondRowSecondCol.classList.add("col-4", "d-flex", "justify-content-end");
             const lastBidHeading = document.createElement("h3");
             lastBidHeading.innerText = `$ ${lastBid}`
+            const containerThirdRow = document.createElement("div");
+            containerThirdRow.classList.add("row", "d-flex");
+            const thirdRowFirstCol = document.createElement("div");
+            thirdRowFirstCol.classList.add("col-8");
+            const currentBidder = document.createElement("p");
+            currentBidder.innerText = `Made by: `;
+            const thirdRowSecondCol = document.createElement("div");
+            thirdRowSecondCol.classList.add("col-4", "d-flex", "justify-content-end");
+            const lastBidderName = document.createElement("p");
+            lastBidderName.innerText = `${lastBidder}`
 
             listingContainer.appendChild(itemTitle);
             listingContainer.appendChild(containerFirstRow);
             containerFirstRow.appendChild(containerFirstCol);
             containerFirstCol.appendChild(itemSeller);
             containerFirstRow.appendChild(containerSecondCol);
-            containerSecondCol.appendChild(linkToSeller);
+            containerSecondCol.appendChild(sellerName);
             listingContainer.appendChild(itemDescription);
             listingContainer.appendChild(datesContainer);
             datesContainer.appendChild(datesEndsAt);
@@ -52,6 +61,11 @@ export function renderHtmlForSpecificListing(listing) {
             secondRowFirstCol.appendChild(currentBidHeading);
             containerSecondRow.appendChild(secondRowSecondCol);
             secondRowSecondCol.appendChild(lastBidHeading); 
+            listingContainer.appendChild(containerThirdRow);
+            containerThirdRow.appendChild(thirdRowFirstCol);
+            thirdRowFirstCol.appendChild(currentBidder);
+            containerThirdRow.appendChild(thirdRowSecondCol);
+            thirdRowSecondCol.appendChild(lastBidderName); 
         } else { 
             const itemTitle = document.createElement("h1");
             itemTitle.innerText = title;
@@ -63,10 +77,8 @@ export function renderHtmlForSpecificListing(listing) {
             itemSeller.innerText = `Seller: `;
             const containerSecondCol = document.createElement("div");
             containerSecondCol.classList.add("col-6", "d-flex", "justify-content-end");
-            const linkToSeller = document.createElement("a");
-            linkToSeller.classList.add("nav-link");
-            linkToSeller.href = `profile.html?username=${seller.name}`;
-            linkToSeller.innerText = `${seller.name}`;
+            const sellerName = document.createElement("h3");
+            sellerName.innerText = `${seller.name}`;
             const itemMedia = document.createElement("div");
             itemMedia.classList.add("listing-images");
             const itemDescription = document.createElement("p");
@@ -84,14 +96,24 @@ export function renderHtmlForSpecificListing(listing) {
             const secondRowSecondCol = document.createElement("div");
             secondRowSecondCol.classList.add("col-4", "d-flex", "justify-content-end");
             const lastBidHeading = document.createElement("h3");
-            lastBidHeading.innerText = `$ ${lastBid}`
+            lastBidHeading.innerText = `$ ${lastBid}`;
+            const containerThirdRow = document.createElement("div");
+            containerThirdRow.classList.add("row", "d-flex");
+            const thirdRowFirstCol = document.createElement("div");
+            thirdRowFirstCol.classList.add("col-8");
+            const currentBidder = document.createElement("p");
+            currentBidder.innerText = `Made by: `;
+            const thirdRowSecondCol = document.createElement("div");
+            thirdRowSecondCol.classList.add("col-4", "d-flex", "justify-content-end");
+            const lastBidderName = document.createElement("p");
+            lastBidderName.innerText = `${lastBidder}`
 
             listingContainer.appendChild(itemTitle);
             listingContainer.appendChild(containerFirstRow);
             containerFirstRow.appendChild(containerFirstCol);
             containerFirstCol.appendChild(itemSeller);
             containerFirstRow.appendChild(containerSecondCol);
-            containerSecondCol.appendChild(linkToSeller);
+            containerSecondCol.appendChild(sellerName);
             listingContainer.appendChild(itemMedia);
             listingContainer.appendChild(itemDescription);
             listingContainer.appendChild(datesContainer);
@@ -101,6 +123,11 @@ export function renderHtmlForSpecificListing(listing) {
             secondRowFirstCol.appendChild(currentBidHeading);
             containerSecondRow.appendChild(secondRowSecondCol);
             secondRowSecondCol.appendChild(lastBidHeading); 
+            listingContainer.appendChild(containerThirdRow);
+            containerThirdRow.appendChild(thirdRowFirstCol);
+            thirdRowFirstCol.appendChild(currentBidder);
+            containerThirdRow.appendChild(thirdRowSecondCol);
+            thirdRowSecondCol.appendChild(lastBidderName); 
 
 
 
@@ -124,10 +151,8 @@ export function renderHtmlForSpecificListing(listing) {
         itemSeller.innerText = `Seller: `;
         const containerSecondCol = document.createElement("div");
         containerSecondCol.classList.add("col-6", "d-flex", "justify-content-end");
-        const linkToSeller = document.createElement("a");
-        linkToSeller.classList.add("nav-link");
-        linkToSeller.href = `profile.html?username=${seller.name}`;
-        linkToSeller.innerText = `${seller.name}`;
+        const sellerName = document.createElement("h3");
+        sellerName.innerText = `${seller.name}`;
         const itemDescription = document.createElement("p");
         itemDescription.classList.add("pt-2");
         itemDescription.innerText = description;
@@ -150,7 +175,7 @@ export function renderHtmlForSpecificListing(listing) {
         containerFirstRow.appendChild(containerFirstCol);
         containerFirstCol.appendChild(itemSeller);
         containerFirstRow.appendChild(containerSecondCol);
-        containerSecondCol.appendChild(linkToSeller);
+        containerSecondCol.appendChild(sellerName);
         listingContainer.appendChild(itemDescription);
         listingContainer.appendChild(datesContainer);
         datesContainer.appendChild(datesEndsAt);
@@ -170,10 +195,8 @@ export function renderHtmlForSpecificListing(listing) {
         itemSeller.innerText = `Seller: `;
         const containerSecondCol = document.createElement("div");
         containerSecondCol.classList.add("col-6", "d-flex", "justify-content-end");
-        const linkToSeller = document.createElement("a");
-        linkToSeller.classList.add("nav-link");
-        linkToSeller.href = `profile.html?username=${seller.name}`;
-        linkToSeller.innerText = `${seller.name}`;
+        const sellerName = document.createElement("h3");
+        sellerName.innerText = `${seller.name}`;
         const itemMedia = document.createElement("div");
         itemMedia.classList.add("listing-images");
         const itemDescription = document.createElement("p");
@@ -198,7 +221,7 @@ export function renderHtmlForSpecificListing(listing) {
         containerFirstRow.appendChild(containerFirstCol);
         containerFirstCol.appendChild(itemSeller);
         containerFirstRow.appendChild(containerSecondCol);
-        containerSecondCol.appendChild(linkToSeller);
+        containerSecondCol.appendChild(sellerName);
         listingContainer.appendChild(itemMedia);
         listingContainer.appendChild(itemDescription);
         listingContainer.appendChild(datesContainer);

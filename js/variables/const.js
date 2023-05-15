@@ -45,6 +45,7 @@ export const bidModalButton = document.querySelector(".view-bids-btn")
 const params = new URLSearchParams(window.location.search);
 export const idParam = params.get("id"); 
 export const usernameParam = params.get("username"); 
+export const listingsParam = params.get("listings");
 
 // update listing
 export const updateListingForm = document.querySelector(".update-listing-form");

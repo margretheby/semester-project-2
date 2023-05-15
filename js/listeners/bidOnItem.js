@@ -28,25 +28,25 @@ async function bidOnListing(bid) {
         const response = await fetch(bidOnListingUrl, bidData);
         const result = await response.json();
 
-        successMessage(result.bids);
+        if (response.ok) {
+            successMessage();
+            setTimeout(reloadPage, 5000);
+
+        } else {
+            bidMessage.innerText = `Sorry! Your bid must be higher than the current bid.`;
+        }
 
 
     } catch(error) {
         console.log(error);
-        bidMessage.innerText = `Sorry! Your bid must be higher than the current bid.`;
     }
 }
 
 
-function successMessage(bid) {
+function successMessage() {
+        bidMessage.innerText = `Success! Your bid was accepted.`; 
+}
 
-    for(let i = 0; i < bid.length; i++) {
-        const newBid = bid[bid.length -1].amount;
-        const currentBid = bid[bid.length -2].amount;
-        if (bid.length === 0) {
-            bidMessage.innerText = `Success! Your bid was accepted.`; 
-        } else if (newBid > currentBid) {
-            bidMessage.innerText = `Success! Your bid was accepted.`;         
-        }
-    }
+function reloadPage() {
+    location.reload();
 }
