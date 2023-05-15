@@ -14,8 +14,6 @@ export async function getProfileListings() {
         }
         const response = await fetch(profileListingsUrl, userData);
         const result = await response.json();
-        console.log(result);
-        console.log(profileListingsUrl)
 
         renderHtmlForListings(result, userListingsContainer);
 

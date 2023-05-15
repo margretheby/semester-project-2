@@ -17,8 +17,6 @@ export async function fetchSpecificListing() {
         const result = await response.json();
         renderHtmlForSpecificListing(result);
 
-        console.log(result);
-
     } catch (error) {
         console.log(error);
     }
