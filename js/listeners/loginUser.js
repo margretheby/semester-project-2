@@ -12,6 +12,11 @@ export function setLoginListener() {
     });
 }
 
+/**
+ * Logs in a user 
+ * @param { string } url 
+ * @param { object } info 
+ */
 async function login(url, info) {
     try {
         const userInfo = {

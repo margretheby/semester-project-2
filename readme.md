@@ -9,7 +9,7 @@ When a new user joins the website, they are given 1000 credits to use on the sit
 
 ### Links
 - <a href="https://margretheby.github.io/semester-project-2/" target="_blank">BidBox website</a>
-- <a href="https://xd.adobe.com/view/4df2ad3f-c9a1-4db0-ab79-c2abf7f81eaf-18a1/" target="_blank">Low-fidelity prototype</a>
+- <a href="https://xd.adobe.com/view/4df2ad3f-c9a1-4db0-ab79-c2abf7f81eaf-18a1/" target="_blank">Mid-fidelity prototype</a>
 - <a href="https://github.com/users/margretheby/projects/2" target="_blank">Gantt Chart</a>
 
 ### Required user stories

@@ -12,6 +12,10 @@ export function setRegistrerUserListener() {
     })
 }
 
+/**
+ * Registrers new user
+ * @param { object } user The registrered user data that is sent to the API.
+ */
 async function registrerUser(user) {
     try {
         const userData = {
@@ -32,6 +36,5 @@ async function registrerUser(user) {
         } 
     } catch (error) {
         console.log(error);
-        //registrerSuccessMessage.innerText = "Ooobs! Seems like something went wrong, please try again."
     }
 }

@@ -19,6 +19,10 @@ export async function getProfile () {
     }
 }
 
+/**
+ * Creates html based on an object fetched from an API.
+ * @param { object } profileInfo The object fetched from an API.
+ */
 function createHtmlForProfile(profileInfo) {
     const { name, avatar, credits } = profileInfo;
     if(usernameParam) {
