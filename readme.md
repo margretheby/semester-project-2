@@ -2,7 +2,10 @@
 <img src="https://github.com/margretheby/semester-project-2/blob/main/Screenshot-bidbox.png" alt="Screenshot of the BidBox website on desktop">
 
 ## Description
-This was an assignment from Noroff school of technology and digital media. The assignment was to create a functional online auction website. An API was provided, but design was optional.
+This was an assignment from Noroff school of technology and digital media, second year first semester: 
+
+"An auction site is looking to launch a website where users can add items to be bid on and bid on items other users have put up for auction.
+When a new user joins the website, they are given 1000 credits to use on the site. They can get credits by selling items and use credit by buying items. Non-registered users can search through the listings, but only registered users can make bids on listings.The assignment was to create a functional online auction website. All API functionality is managed by an existing application. This project only covers the front-end application for the API."
 
 ### Links
 - <a href="https://margretheby.github.io/semester-project-2/" target="_blank">BidBox website</a>
