@@ -1,13 +1,13 @@
-import { loading } from "../variables/const.js";
+import { listingsContainer, loading } from "../variables/const.js";
 
 /**
- * Accepts two objects as arguments, and renders HTML to display the properties of the first object.
+ * Accepts one objects as an argument, and renders HTML to display the properties of that object.
  * @param { object } listing An object fetched from an API.
- * @param { object } container Where the HTML from the first object is displayed.
  */
-export function renderHtmlForListings(listing, container) {
-    for (let i = 0; i < listing.length; i++) {
-        const { title, media, _count, id } = listing[i];
+export function renderSearchResult(result) {
+    listingsContainer.innerHTML = "";
+    result.forEach(function (result) {
+        const { media, title, _count, id } = result;
         loading.innerHTML = "";
 
         if (media.length === 0) {
@@ -26,7 +26,7 @@ export function renderHtmlForListings(listing, container) {
             const bidsHeading = document.createElement("h3");
             bidsHeading.innerText = `Bids: ${_count.bids}`
 
-            container.append(divContainer);
+            listingsContainer.append(divContainer);
             divContainer.appendChild(link);
             link.appendChild(divRow);
             divRow.appendChild(divColumn);
@@ -55,7 +55,7 @@ export function renderHtmlForListings(listing, container) {
             const bidsHeading = document.createElement("h3");
             bidsHeading.innerText = `Bids: ${_count.bids}`
             
-            container.append(divContainer);
+            listingsContainer.append(divContainer);
             divContainer.append(link);
             link.appendChild(imageContainer);
             imageContainer.appendChild(listingImage);
@@ -67,5 +67,7 @@ export function renderHtmlForListings(listing, container) {
 
 
         }
-    }
+    })
+    
+    
 }
