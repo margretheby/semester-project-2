@@ -1,5 +1,5 @@
 import { loginUrl } from "../api/urls.js";
-import { loginForm } from "../variables/const.js";
+import { loginForm, loginError } from "../variables/const.js";
 
 export function setLoginListener() {
     loginForm.addEventListener("submit", (event) => {
@@ -27,15 +27,19 @@ async function login(url, info) {
         const token = result.accessToken;
         const userName = result.name;
         const userCredits = result.credits;
-        console.log(result);
+        
+        if(response.ok) {
+            localStorage.setItem("token", token);
+            localStorage.setItem("username", userName);
+            localStorage.setItem("credits", userCredits);
 
-        localStorage.setItem("token", token);
-        localStorage.setItem("username", userName);
-        localStorage.setItem("credits", userCredits);
+            if(token) {
+                window.location.href = "profile.html";
+            } 
+        } else {
+            loginError.innerText = `Something went wrong. Please try again.`;
+        }
 
-        if(token) {
-            window.location.href = "profile.html";
-        } 
     } catch (error) {
         console.log(error);
     }

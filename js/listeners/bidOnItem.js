@@ -28,20 +28,18 @@ async function bidOnListing(bid) {
         const response = await fetch(bidOnListingUrl, bidData);
         const result = await response.json();
 
-
         if (response.ok) {
             successMessage();
             setTimeout(reloadPage, 5000);
-
         } else {
             if(!token) {
                 bidMessage.innerText = `Ooobs! You have to be logged in to bid. `;
                 bidMessage.innerHTML += `<a href="login.html" class="btn btn-secondary">login</a> or <a href="registrer.html" class="btn btn-secondary">registrer</a> here.`
             } else if (response.status === 403) {
                 bidMessage.innerText = `Sorry! You can't bid on your own listing.`;
-            }
+            } 
             else {
-                bidMessage.innerText = `Sorry! Your bid must be higher than the current bid.`;
+                bidMessage.innerText = `Ooobs! Either you don't have enough credits, or your bid was not higher than the last bid.`;
             }
         }
 

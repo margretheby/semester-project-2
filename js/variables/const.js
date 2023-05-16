@@ -19,6 +19,7 @@ export const registrerSuccessMessage = document.querySelector(".registrer-succes
 
 //login page
 export const loginForm = document.querySelector(".login-form");
+export const loginError = document.querySelector(".login-error");
 
 // login/logout link 
 export const loginButton = document.querySelector(".login-link");

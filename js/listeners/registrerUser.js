@@ -32,6 +32,6 @@ async function registrerUser(user) {
         } 
     } catch (error) {
         console.log(error);
-        registrerSuccessMessage.innerText = "Ooobs! Seems like something went wrong, please try again."
+        //registrerSuccessMessage.innerText = "Ooobs! Seems like something went wrong, please try again."
     }
 }
