@@ -45,6 +45,6 @@ npm install -D sass
 
 ## Contact
 - <a href="https://mby-portfolio.netlify.app" target="_blank">Portfolio</a>
-- <a href="https://www.linkedin.com/in/margrethe-by-6abb98226/" target="_blank">My LinkedIn page</a>
-- <a href="https://github.com/margretheby" target="_blank">My GitHub</a>
+- <a href="https://www.linkedin.com/in/margrethe-by-6abb98226/" target="_blank">LinkedIn page</a>
+- <a href="https://github.com/margretheby" target="_blank">GitHub</a>
 - <a href="mailto:margrethe.developer@gmail.com">margrethe.developer@gmail.com</a>
