@@ -1,11 +1,15 @@
-# semester-project-2
+# Semester Project 2
 <img src="https://github.com/margretheby/semester-project-2/blob/main/Screenshot-bidbox.png" alt="Screenshot of the BidBox website on desktop">
 
 ## Description
-This assignment was to create a functional online auction website. An API was provided, but design was optional.
-Check out this <a href="https://trello.com/b/9t7kmeKL/semester-project-2">Trello board</a> to see how I planned the project. 
+This was an assignment from Noroff school of technology and digital media. The assignment was to create a functional online auction website. An API was provided, but design was optional.
 
-### Requirements
+### Links
+- <a href="https://margretheby.github.io/semester-project-2/">BidBox website</a>
+- <a href="https://xd.adobe.com/view/4df2ad3f-c9a1-4db0-ab79-c2abf7f81eaf-18a1/">Prototype</a>
+- <a href="https://github.com/users/margretheby/projects/2">Gantt Chart</a>
+
+### Required user stories
 - A user with a stud.noroff.no email may register
 - A registered user may login
 - A registered user may logout
