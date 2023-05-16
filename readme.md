@@ -1,4 +1,5 @@
 # semester-project-2
+<img src="https://github.com/margretheby/semester-project-2/blob/main/Screenshot-bidbox.png" alt="Screenshot of the BidBox website on desktop">
 
 ## Description
 This assignment was to create a functional online auction website. An API was provided, but design was optional.
