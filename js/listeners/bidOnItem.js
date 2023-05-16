@@ -37,7 +37,7 @@ async function bidOnListing(bid) {
             if(!token) {
                 bidMessage.innerText = `Ooobs! You have to be logged in to bid. `;
                 bidMessage.innerHTML += `<a href="login.html" class="btn btn-secondary">login</a> or <a href="registrer.html" class="btn btn-secondary">registrer</a> here.`
-            } else if (token) {
+            } else if (response.status === 403) {
                 bidMessage.innerText = `Sorry! You can't bid on your own listing.`;
             }
             else {
