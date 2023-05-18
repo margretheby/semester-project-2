@@ -1,8 +1,6 @@
 import { listItemUrl } from "../api/urls.js";
 import { listItemForm, token } from "../variables/const.js";
 
-const mediaArray = [];
-
 export function setListNewItemListener() {
     listItemForm.addEventListener("submit", (event) => {
         event.preventDefault();
@@ -14,11 +12,29 @@ export function setListNewItemListener() {
         const media = [formData.get("media")];
         const endsAt = formData.get("endsAt");
 
-        listNewItem({title, description, media, endsAt});
+        if (media[0] !== '') {
+            const listing = {
+                title, 
+                description, 
+                media,
+                endsAt
+            }
+            listNewItem(listing);
+        } else {
+            const listing = {
+                title, 
+                description, 
+                endsAt
+            }
+            listNewItem(listing);
+        }
+        
+        
+
     })
 }
 
-async function listNewItem(title, description, media, endsAt) {
+async function listNewItem(listing) {
     try {
         const itemData = {
             method: "POST",
@@ -26,11 +42,14 @@ async function listNewItem(title, description, media, endsAt) {
                 "Content-Type": "application/json",
                 Authorization: `Bearer ${token}`
             },
-            body: JSON.stringify(title, description, media, endsAt)
+            body: JSON.stringify(listing)
         }
 
         const response = await fetch (listItemUrl, itemData);
         const result = await response.json();
+
+        console.log(response);
+        console.log(result);
 
         location.reload();
     } catch (error) {
