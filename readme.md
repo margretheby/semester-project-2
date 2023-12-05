@@ -1,6 +1,6 @@
 # Semester Project 2
 <img src="https://github.com/margretheby/semester-project-2/blob/main/Screenshot-bidbox.png" alt="Screenshot of the BidBox website on desktop">
-This website was a five week semester project in the spring of 2023, during the frontend course at Noroff school of technology and digital media, second year first semester: 
+This website was a five week semester project in the spring of 2023, during the frontend course at Noroff school of technology and digital media.
 
 ## Description
 "An auction site is looking to launch a website where users can add items to be bid on and bid on items other users have put up for auction.
