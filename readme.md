@@ -1,9 +1,8 @@
 # Semester Project 2
 <img src="https://github.com/margretheby/semester-project-2/blob/main/Screenshot-bidbox.png" alt="Screenshot of the BidBox website on desktop">
+This website was a five week semester project in the spring of 2023, during the frontend course at Noroff school of technology and digital media, second year first semester: 
 
 ## Description
-This was an assignment from Noroff school of technology and digital media, second year first semester: 
-
 "An auction site is looking to launch a website where users can add items to be bid on and bid on items other users have put up for auction.
 When a new user joins the website, they are given 1000 credits to use on the site. They can get credits by selling items and use credit by buying items. Non-registered users can search through the listings, but only registered users can make bids on listings.The assignment was to create a functional online auction website. All API functionality is managed by an existing application. This project only covers the front-end application for the API."
 
@@ -42,8 +41,7 @@ The company CTO has set the following technical restrictions:
 
 ``` 
 git clone git@github.com:margretheby/semester-project-2.git
-npm install bootstrap
-npm install -D sass
+npm install
 ```
 
 ## Contact
